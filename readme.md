@@ -13,6 +13,13 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
 ## Official Documentation
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## require
+
+    "php": ">=5.5.9",
+    "laravel/framework": "5.1.*",
+    "zizaco/entrust":"5.2.x-dev",
+    "barryvdh/laravel-debugbar": "^2.4"
+
 
 ## Contributing
 
