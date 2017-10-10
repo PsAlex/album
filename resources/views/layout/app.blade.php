@@ -44,7 +44,8 @@
                 <li>
                     <a href="{{url('/softs')}}">软件查询</a>
                 </li>
-                <li class="dropdown">
+                @if(Auth::user())
+                    <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="false">管理<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -53,6 +54,8 @@
                         <li><a href="{{url('/admin/permissions')}}">权限管理</a></li>
                     </ul>
                 </li>
+                @endif
+                
                 <li><a href="http://192.168.30.2" target="_blank">归档</a></li>
                 <li><a href="http://192.168.30.2:8081" target="_blank">论坛</a></li>
                 <li class="dropdown">
