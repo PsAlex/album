@@ -63,6 +63,7 @@ home-
 		{!!$albums->appends(['sort'=>$s])->render() !!}
 	</nav>
 </div>
+ 
 @if (checkPerm('albums.destroy'))
 @include('layout.model.delete', ['modal_title'=>'删除'])
 @endif

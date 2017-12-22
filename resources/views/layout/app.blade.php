@@ -8,6 +8,7 @@
     <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     <link rel="stylesheet" href="{{asset('/css/css.css')}}">
+    <link rel="stylesheet" href="{{ asset('/canvas-nav/bootstrap-off-canvas-nav.css') }}">
     <style>
         body {
             padding-top: 70px;
@@ -22,13 +23,13 @@
     <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ondragstart="return false;">
+<body>
     <!--nav -->
     <nav class="navbar navbar-default  navbar-fixed-top ">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1">
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -55,7 +56,7 @@
                     </ul>
                 </li>
                 @endif
-                
+
                 <li><a href="http://192.168.30.2" target="_blank">归档</a></li>
                 <li><a href="http://192.168.30.2:8081" target="_blank">论坛</a></li>
                 <li class="dropdown">
@@ -95,8 +96,8 @@
         <form class="navbar-form navbar-right" role="search" method="get" action="{{url('?wd=')}}">
             <div class="form-group">
                 <input type="text" class="form-control input-sm"  placeholder="搜索输入..." name="wd"></div>
-            </form>
-        </div>
+        </form>
+
     </div>
 </nav>
 <!--nav end-->
@@ -127,6 +128,7 @@
 <!-- Scripts -->
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/bootstrap.js')}}"></script>
+<script src="{{asset('/canvas-nav/bootstrap-off-canvas-nav.js')}}"></script>
 <script type="text/javascript">
     $('#delete').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);
@@ -141,7 +143,7 @@
         var modal = $(this);
         var role = button.data('role');
         modal.find('form').attr('action', url);
-    });    
+    });
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     })

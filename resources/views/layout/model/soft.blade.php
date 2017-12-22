@@ -18,14 +18,12 @@
                         </div>
                         <br>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="explain" autocomplete="off"
-                            aria-describedby="sizing-addon2">
+                            <textarea class="form-control" name="explain" autocomplete="off" style="min-height: 100px;resize: none;"></textarea>
                             <span class="input-group-addon " id="sizing-addon2" >说明</span>
                         </div>
                         <br>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="download_href"
-                            aria-describedby="sizing-addon2" autocomplete="off">
+                        <textarea class="form-control" name="download_href" autocomplete="off"style="min-height: 100px;resize: none;"></textarea>
                             <span class="input-group-addon" id="sizing-addon3" >文件保存位置</span>
                         </div>
                         <br>

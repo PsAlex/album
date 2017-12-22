@@ -51,8 +51,10 @@ soft-
             <tr>
                 <td>
                     <div class="col-md-12">
-                        <div class ="col-md-6">{{$soft->name}}</div>
-                        <div class ="col-md-6">{{$soft->explain}} </div>
+                        <div class ="col-md-12"><h3>{{$soft->name}}</h3></div>
+                        <div class ="col-md-12">
+                            &nbsp&nbsp&nbsp&nbsp{{$soft->explain}}
+                        </div>
                         <div class ="col-md-12">{{$soft->download_href}}</div>
                         @if(Auth::user())
                         <div class="col-md-12">
@@ -96,8 +98,8 @@ soft-
             dataType: "json",
             success: function (data) {
                 modal.find("input[name='name']").attr('value', data.json_str.name);
-                modal.find("input[name='explain']").attr('value', data.json_str.explain);
-                modal.find("input[name='download_href']").attr('value', data.json_str.download_href);
+                modal.find("textarea[name='explain']").val(data.json_str.explain);
+                modal.find("textarea[name='download_href']").val(data.json_str.download_href);
             }
         });
         modal.find('form').attr('action', url);
